@@ -1,0 +1,4 @@
+model_name,parameters,f1_score
+statsmodels,,0.595276609511485
+xgboost,"{'subsample': 1.0, 'n_estimators': 700, 'max_depth': 10, 'learning_rate': 0.1, 'colsample_bytree': 0.8}",0.8027671474830733
+,,
