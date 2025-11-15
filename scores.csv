@@ -1,4 +1,7 @@
 model_name,parameters,f1_score
 statsmodels,,0.595276609511485
 xgboost,"{'subsample': 1.0, 'n_estimators': 700, 'max_depth': 10, 'learning_rate': 0.1, 'colsample_bytree': 0.8}",0.8027671474830733
-,,
+lightgbm,,
+catboost,"{'subsample': 1.0, 'learning_rate': 0.1, 'l2_leaf_reg': 1, 'iterations': 500, 'depth': 8}",0.804973645087174
+catboost,"{'subsample': 1.0, 'learning_rate': 0.1, 'l2_leaf_reg': 1, 'iterations': 700, 'depth': 8}",0.8115770821027761
+randomforest," n_estimators=100,    class_weight='balanced',   random_state=RANDOM_STATE,",0.8344
