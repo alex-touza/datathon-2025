@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="GithubDefaultAccount">
-    <option name="defaultAccountId" value="6ec6f274-3b18-49bc-a20c-b65083ef3ae6" />
+  <component name="Black">
+    <option name="sdkName" value="Python 3.13 (datathon-2025)" />
   </component>
-  <component name="ProjectRootManager">
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_24" project-jdk-name="Python 3.13 (datathon-2025)" project-jdk-type="Python SDK">
     <output url="file://$PROJECT_DIR$/out" />
   </component>
 </project>

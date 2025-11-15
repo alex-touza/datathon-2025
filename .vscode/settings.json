@@ -1,0 +1,4 @@
+{
+    "liveshare.notebooks.allowGuestExecuteCells": true,
+    "liveshare.featureSet": "insiders"
+}
