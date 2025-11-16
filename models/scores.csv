@@ -6,3 +6,4 @@ catboost,"{'subsample': 1.0, 'learning_rate': 0.1, 'l2_leaf_reg': 1, 'iterations
 catboost,"{'subsample': 1.0, 'learning_rate': 0.1, 'l2_leaf_reg': 1, 'iterations': 700, 'depth': 8}",0.8166259168704156
 randomforest," n_estimators=100,    class_weight='balanced',   random_state=RANDOM_STATE,",0.8344390388
 xgboost,"{'subsample': 0.7, 'n_estimators': 700, 'max_depth': 10, 'learning_rate': 0.1, 'colsample_bytree': 0.8}",0.8326359832635983
+randomforest_strat,"{'n_estimators': 200, 'min_samples_split': 2, 'min_samples_leaf': 1, 'max_features': None, 'max_depth': None, 'bootstrap': True}",0.8436854427764771
