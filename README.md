@@ -44,7 +44,7 @@ More detailed explanation about each paremeter can be found in `data/statement.p
 ```text
 datathon-2025/
 ├── data/                # Dataset(s) provided for the Datathon (train / test / samples)
-├── graphs/              # Plots and explainability visualizations (SHAP, PDP, etc.)
+├── graphs/              # Plots and explainability visualizations (with SHAP)
 ├── models/              # Code to train and execute the binary classification models
 ├── catboost_info/       # CatBoost training logs/metadata
 ├── rootForest.pkl       # Example trained tree-based model used in our experiments
@@ -52,8 +52,6 @@ datathon-2025/
 ├── .idea/, .vscode/     # IDE / editor config
 └── *.ipynb              # Jupyter notebooks with the full workflow (training + explainability)
 ```
-
-> Note: All core logic (training, evaluation, explainability) lives in the **Jupyter notebooks** in the repository root.
 
 ---
 
@@ -84,7 +82,6 @@ The heart of this project is **explainable ML**. We focus on both **global** and
 - **Global insights**
   - **Feature importance** from the model.
   - **SHAP summary plots** to see which features most strongly drive **wins vs losses**.
-  - **Partial Dependence Plots (PDP)** or **Accumulated Local Effects (ALE)** to show how changing a feature affects the predicted win probability.
 
 - **Local insights**
   - **SHAP force / waterfall plots** for individual opportunities:
@@ -115,57 +112,7 @@ Open the notebooks with your preferred tool:
 jupyter lab
 ```
 
-### 4.3 Typical workflow
-
-0. **Install required libraries**
-
-1. **Exploration & training notebook**
-   - Load data from `data/`.
-   - Train baseline and advanced models.
-   - Evaluate with F1-score.
-   - Save the best model into `models/model_name.pkl`.
-
-2. **Explainability notebook**
-   - Load the trained model and a validation set.
-   - Compute SHAP values.
-   - Generate:
-     - Global SHAP summary and feature importance plots.
-     - PDP / ALE for key features.
-     - Local explanations for hand-picked opportunities.
-   - Export plots to the `graphs/` folder.
-
-3. **Reporting / slides**
-   - Use the figures in `graphs/` plus text summaries from notebooks.
-   - Create a short report or presentation targeting **non-technical stakeholders**.
-
----
-
-## 5. Interpreting the Results (for Business Users)
-
-Some examples of the kind of insights this repository is meant to produce:
-
-- **Which features matter most overall?**  
-  E.g. *Customer hitrate*, *historical sales of product A*, and the presence of *competitor X* may dominate the model’s decisions.
-
-- **What drives a win?**
-  - High `cust_hitrate` and many `cust_contracts`
-  - Strong `product_A_sold_in_the_past`
-  - Absence of key competitors
-
-- **What drives a loss?**
-  - Low `cust_hitrate`
-  - Few past interactions or contracts
-  - Presence of strong competitors (`competitor_X`, `competitor_Y`, `competitor_Z`)
-  - Very old opportunities (`opp_old`), suggesting stalled deals
-
-Each explanation is presented visually (SHAP / PDP plots) and with **plain-language summaries** so that sales and marketing teams can:
-
-- Prioritize opportunities with **high win probability**, and  
-- Understand **which levers they can pull** to improve the chances of winning.
-
----
-
-## 7. References
+## 5. References
 
 - Schneider Electric Datathon 2025 problem statement (GTM Machine Learning Explainability).
 
